@@ -1,7 +1,7 @@
 "use strict";
 
-var SingleList = require("../services/single-linked-list");
-var Node = require("../services/node");
+var SingleList = require("../services/data-structures/single-linked-list");
+var Node = require("../services/data-structures/node");
 function addRoutes(router) {
   router.get('/singlelist/add/:value', function (req, res, next) {
     let singleList = new SingleList();

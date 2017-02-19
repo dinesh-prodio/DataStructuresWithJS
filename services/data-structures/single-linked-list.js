@@ -256,6 +256,22 @@ class SingleLinkedList {
     return kthNode;
   }
 
+  getMidPoint() {
+    let singleMove = head, doubleMove = head, i = 0;
+    while (doubleMove.next) {
+      if (i == 0) {
+        doubleMove = doubleMove.next;
+        i = 1;
+      }
+      else {
+        doubleMove = doubleMove.next;
+        singleMove = singleMove.next;
+        i = 0;
+      }
+    }
+    return singleMove;
+  }
+
   static CreateList() {
     let list = new SingleLinkedList();
     for (let i = 0; i < 5; i++) {
