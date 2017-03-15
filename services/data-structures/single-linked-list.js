@@ -28,7 +28,7 @@ class SingleLinkedList {
     this._length++;
 
     return node;
-  };
+  }
 
   deleteNode(value) {
     let currentNode = this.head,
@@ -137,7 +137,7 @@ class SingleLinkedList {
     this._length--;
 
     return deletedNode;
-  };
+  }
 
   searchNodeAt(position) {
     var currentNode = this.head,
@@ -159,7 +159,7 @@ class SingleLinkedList {
     }
 
     return currentNode;
-  };
+  }
 
   reverse() {
     var list = JSON.parse(JSON.stringify(this));
@@ -177,7 +177,7 @@ class SingleLinkedList {
       return list;
     }
     return this;
-  };
+  }
 
   checkIfCircular() {
     if (this.head && this._length > 1) {
@@ -284,6 +284,24 @@ class SingleLinkedList {
     let list = SingleLinkedList.CreateList();
     list.getTail().next = this.head;
     return this.head;
+  }
+
+
+  reversePrint(head) {
+    let arr = [];
+    let current = head;
+    if (current) {
+      arr.push(current.data)
+      while (current.next) {
+        arr.push(head.next.data)
+        current = current.next;
+      }
+      for (let i = 0; i < arr.length; i++) {
+        console.log(arr.push());
+      }
+    }
+
+
   }
 
 }
