@@ -1,6 +1,6 @@
 "use strict";
 
-function bubbleSort(arrayToSort) {
+function bubbleSort (arrayToSort) {
   let sorted = false;
   for (let pass = arrayToSort.length - 1; pass >= 0 && !sorted; pass--) {
     sorted = true;
@@ -14,7 +14,7 @@ function bubbleSort(arrayToSort) {
   return arrayToSort;
 }
 
-function selectSort(arrayToSort) {
+function selectSort (arrayToSort) {
   for (let i = 0; i < arrayToSort.length; i++) {
     let min = i;
     for (let j = i + 1; j < arrayToSort.length; j++) {
@@ -27,7 +27,7 @@ function selectSort(arrayToSort) {
   return arrayToSort;
 }
 
-function insertionSort(arrayToSort) {
+function insertionSort (arrayToSort) {
   for (let i = 1; i < arrayToSort.length; i++) {
     let j = i;
     while (j > 0 && arrayToSort[j - 1] > arrayToSort[i]) {
@@ -38,8 +38,8 @@ function insertionSort(arrayToSort) {
   return arrayToSort;
 }
 
-function mergeSort(arrayToSort) {
-  function mergeSortImplementation(arr) {
+function mergeSort (arrayToSort) {
+  function mergeSortImplementation (arr) {
     if (arr.length < 2)
       return arr;
 
@@ -50,7 +50,7 @@ function mergeSort(arrayToSort) {
     return merge(mergeSortImplementation(left), mergeSortImplementation(right));
   }
 
-  function merge(left, right) {
+  function merge (left, right) {
     let result = [];
 
     while (left.length && right.length) {
@@ -73,7 +73,7 @@ function mergeSort(arrayToSort) {
   return mergeSortImplementation(arrayToSort);
 }
 
-function quickSort(arrayToSort, left = 0, right = arrayToSort.length - 1) {
+function quickSort (arrayToSort, left = 0, right = arrayToSort.length - 1) {
 
   let pivot;
   if (right > left) {
@@ -82,13 +82,13 @@ function quickSort(arrayToSort, left = 0, right = arrayToSort.length - 1) {
     quickSort(arrayToSort, pivot + 1, right);
   }
 
-  function swap(arrayToSort, firstIndex, secondIndex) {
+  function swap (arrayToSort, firstIndex, secondIndex) {
     let temp = arrayToSort[firstIndex];
     arrayToSort[firstIndex] = arrayToSort[secondIndex];
     arrayToSort[secondIndex] = temp;
   }
 
-  function partition(arrayToSort, left, right) {
+  function partition (arrayToSort, left, right) {
     var pivot = arrayToSort[left],
       i = left,
       j = right;
@@ -115,6 +115,7 @@ function quickSort(arrayToSort, left = 0, right = arrayToSort.length - 1) {
 
   return arrayToSort;
 }
+
 
 module.exports = {
   bubbleSort,

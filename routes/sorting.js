@@ -31,6 +31,12 @@ function addRoutes(router) {
     let sortedArray = sort.quickSort(array);
     res.status(200).send(sortedArray);
   });
+
+  router.get('/audit', function (req, res, next) {
+    let array = req.body;
+    let missing = sort.getMissing();
+    res.status(200).send(missing);
+  });
 }
 
 function processData(input) {

@@ -2,6 +2,7 @@ const express = require('express');
 const router = express.Router();
 const SingleList = require('./single-linked-list');
 const Sorting = require('./sorting');
+const Learning = require('./custom-learning');
 const flatten = require('flat');
 /* GET home page. */
 router.get('/', function (req, res, next) {
@@ -68,6 +69,8 @@ router.get('/flatten', function (req, res, next) {
   res.status(200).send(logs);
 });
 
+
 SingleList.addRoutes(router);
 Sorting.addRoutes(router);
+Learning.addRoutes(router);
 module.exports = router;
