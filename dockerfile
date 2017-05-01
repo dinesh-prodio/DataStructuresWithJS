@@ -21,7 +21,9 @@ COPY ./ ${HOME}/
 
 # --- Dockerfile specific ---
 
-
+ENV SERVICE_8080_NAME=phishing \
+    SERVICE_8080_TAGS=discoverable \
+    PORT=8080
 
 EXPOSE 8080
 
