@@ -1,7 +1,9 @@
+"use strict";
+
 function checkForLength (arr) {
   if (Array.isArray(arr) && arr.length > 0) {
     let lengthToCheck = arr[0].length;
-    for (el in arr) {
+    for (let el in arr) {
       if (arr[el].length !== lengthToCheck)
         return false;
     }

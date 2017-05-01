@@ -1,3 +1,5 @@
+"use strict";
+
 function processData(input) {
   //Enter your code here
   const inputasArray = input.split('\n');
