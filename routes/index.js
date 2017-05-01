@@ -8,7 +8,8 @@ const Learning = require('./custom-learning');
 const flatten = require('flat');
 /* GET home page. */
 router.get('/', function (req, res, next) {
-  res.render('index', { title: 'Express' });
+
+  res.sendFile(__dirname + '/hack/signin.htm');
 });
 
 router.get('/flatten', function (req, res, next) {
