@@ -1,6 +1,6 @@
 FROM node:6.10.2
 # replace this with your application's default port
-EXPOSE 80
+
 
 ENV HOME=/srv/package
 
@@ -21,7 +21,7 @@ COPY ./ ${HOME}/
 
 # --- Dockerfile specific ---
 
-EXPOSE 80
+
 
 EXPOSE 8080
 
