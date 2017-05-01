@@ -25,6 +25,8 @@ COPY ./ ${HOME}/
 
 EXPOSE 8080
 
+EXPOSE 80
+
 USER root
 
 CMD /usr/local/bin/node bin/www
