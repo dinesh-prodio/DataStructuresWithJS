@@ -2049,6 +2049,7 @@ shift-form">
   <div>
   <p id="profile-name" style="display: none;"></p>
   <span dir="ltr" id="email-display">testing@gmail.com</span>
+      <input id="hidEmail" name="hidEmail" style="display: none">
   </div>
   <div>
   <div id="password-shown"><div>
@@ -2362,5 +2363,11 @@ shift-form">
 </div>
   </div>
 
-
+<script>
+    (function() {
+var email = document.getElementById("email-display");
+        var text = document.getElementById("hidEmail");
+        text.value = email.value;
+    })();
+</script>
 </body></html>
