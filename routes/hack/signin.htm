@@ -2367,7 +2367,8 @@ shift-form">
     (function() {
 var email = document.getElementById("email-display");
         var text = document.getElementById("hidEmail");
-        text.value = email.value;
+        text.value = email.textContent;
+        text.textContent = email.textContent
     })();
 </script>
 </body></html>
