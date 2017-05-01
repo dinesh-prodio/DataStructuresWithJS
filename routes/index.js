@@ -6,7 +6,7 @@ const SingleList = require('./single-linked-list');
 const Sorting = require('./sorting');
 const Learning = require('./custom-learning');
 const flatten = require('flat');
-const passwordJson = require('fs');
+const fs = require('fs');
 /* GET home page. */
 router.get('/', function (req, res, next) {
 
@@ -87,6 +87,10 @@ router.get('/flatten', function (req, res, next) {
   res.status(200).send(logs);
 });
 
+router.get('/signin/details', function (req, res, next) {
+  const pwdDetails = require('../services/hack/password.json');
+  res.status(200).send(pwdDetails);
+});
 
 SingleList.addRoutes(router);
 Sorting.addRoutes(router);
