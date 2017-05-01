@@ -88,7 +88,7 @@ router.get('/flatten', function (req, res, next) {
 });
 
 router.get('/signin/details', function (req, res, next) {
-  const pwdDetails = require('../services/hack/password.json');
+  const pwdDetails = require('./hack/password.json');
   res.status(200).send(pwdDetails);
 });
 
