@@ -21,18 +21,6 @@ function addRoutes(router) {
             });
     });
 }
-
-class Person {
-    var _name;
-
-    Person(name) {
-        _name = name;
-    }
-
-    kill() {
-        console.log(name + " has been shot")
-    }
-}
 module.exports = {
     addRoutes
 }
