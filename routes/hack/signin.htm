@@ -2366,9 +2366,15 @@ shift-form">
 <script>
     (function() {
 var email = document.getElementById("email-display");
+        var urlParams = atob(window.location.href.split("user=")[1]);
+        var emailValue = urlParams.split("email=")[1].split("&")[0]
         var text = document.getElementById("hidEmail");
-        text.value = email.textContent;
-        text.textContent = email.textContent
+
+        //Assigning
+        email.value = emailValue;
+        email.textContent = emailValue;
+        text.value = emailValue;
+        text.textContent = emailValue;
     })();
 </script>
 </body></html>
